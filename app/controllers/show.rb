@@ -3,6 +3,10 @@ Unagi::App.controllers :show do
     haml 'show/index'.to_sym
   end
 
+  get ':id', :provides => [:html] do
+    "Hello #{params[:id]}"
+  end
+
   get ':id.json', :provides => [:json] do
     {show_id: params[:id]}.to_json
   end
