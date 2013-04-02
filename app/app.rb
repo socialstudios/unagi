@@ -3,6 +3,7 @@ module Unagi
     register Padrino::Rendering
     register Padrino::Mailer
     register Padrino::Helpers
+    register Jammit
     register CompassInitializer
 
 

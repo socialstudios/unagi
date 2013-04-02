@@ -1,0 +1,15 @@
+package_assets: on
+package_path: assets-compiled
+compress_assets: true
+javascript_compressor: closure
+gzip_assets: true
+
+javascripts:
+  application:
+    - public/javascripts/libraries/**/*.js
+    - public/javascripts/application.js
+    - public/javascripts/templates/**/*.jst
+
+stylesheets:
+  application:
+    - public/stylesheets/**/*.css

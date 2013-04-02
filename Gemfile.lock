@@ -13,6 +13,7 @@ GEM
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
+    cssmin (1.0.3)
     diff-lcs (1.2.2)
     fssm (0.2.10)
     haml (4.0.1)
@@ -21,6 +22,12 @@ GEM
       rack (>= 1.0.0)
       url_mount (~> 0.2.1)
     i18n (0.6.4)
+    jammit (0.6.6)
+      cssmin (>= 1.0.3)
+      jsmin (>= 1.0.1)
+    jammit-sinatra (0.6.0.2)
+      jammit (>= 0.6.0)
+    jsmin (1.0.1)
     mail (2.5.3)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -101,6 +108,7 @@ PLATFORMS
 DEPENDENCIES
   compass
   haml
+  jammit-sinatra
   mocha
   mongoid (~> 3.0.0)
   padrino (= 0.11.0)

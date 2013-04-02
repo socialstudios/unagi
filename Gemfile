@@ -14,6 +14,7 @@ source 'https://rubygems.org'
 gem 'rake'
 
 # Component requirements
+gem 'jammit-sinatra'
 gem 'compass'
 gem 'haml'
 gem 'mongoid', '~>3.0.0'
