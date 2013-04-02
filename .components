@@ -1,0 +1,8 @@
+---
+:orm: mongoid
+:test: rspec
+:mock: mocha
+:script: none
+:renderer: haml
+:stylesheet: compass
+:namespace: Unagi
