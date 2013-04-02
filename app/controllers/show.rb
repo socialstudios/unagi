@@ -3,6 +3,10 @@ Unagi::App.controllers :show do
     haml 'show/index'.to_sym
   end
 
+  get ':id.json', :provides => [:json] do
+    {show_id: params[:id]}.to_json
+  end
+
   # get :sample, :map => '/sample/url', :provides => [:any, :js] do
   #   case content_type
   #     when :js then ...
