@@ -1,11 +1,14 @@
 require 'spec_helper'
 
-describe "ShowController" do
+describe "ShowController index" do
   before do
-    get "/"
+    get "/show"
   end
 
-  it "returns hello world" do
-    last_response.body.should == "Hello World"
+  it 'is ok' do
+    last_response.should be_ok
+  end
+  it "Contains the correct title" do
+    last_response.body.should include("<title>Social Studios TV</title>")
   end
 end
