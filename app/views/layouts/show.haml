@@ -1,16 +1,17 @@
 !!! 5
-%html
+%html{lang: 'en'}
   %head
     %title Social Studios TV
     =include_stylesheets :application, :media => 'all'
-  %body.bp
-    %header
-      %h2= "Hello there"
+  %body
+    .container-fluid
+      %header
+        %h2= "Hello there"
 
-    %section#content
-      =yield
+      %section#content
+        =yield
 
-      %footer
-        %p
-          Copyright 2013 Social Studios
+        %footer
+          %p
+            Copyright 2013 Social Studios
     =include_javascripts :application
