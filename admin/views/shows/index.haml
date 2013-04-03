@@ -29,6 +29,7 @@
         %th.header= :created_at
         %th.header= :updated_at
         %th.header= :title
+        %th.header= :data
         %th.header.list-row-action-header
 
     %tbody
@@ -39,6 +40,7 @@
           %td.list-column=time_ago_in_words show.created_at
           %td.list-column=time_ago_in_words show.updated_at
           %td.list-column=show.title
+          %td.list-column=show.data
           %td.list-column.list-row-action
             .list-row-action-wrapper
               =link_to tag_icon(:edit), :href => url(:shows, :edit, :id => show.id), :rel => :tooltip, :title => "#{pat(:edit)} show", :class => 'list-row-action-wrapper-link'
