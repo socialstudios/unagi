@@ -6,3 +6,4 @@
 :renderer: haml
 :stylesheet: compass
 :namespace: Unagi
+:admin_renderer: haml
