@@ -6,12 +6,14 @@
   %body
     .container-fluid
       %header
-        %h2= "Hello there"
+        %h2= "Unagi"
 
       %section#content
         =yield
 
-        %footer
-          %p
-            Copyright 2013 Social Studios
+      %footer
+        %div
+          .container
+            %p
+              Copyright 2013 Social Studios
     =include_javascripts :application

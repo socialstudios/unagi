@@ -1,1 +1,42 @@
 @import "compass_twitter_bootstrap";
+
+$width-content: 640px;
+$center-box: 0px auto;
+$radius: 10px;
+$shadow: 5px 5px 5px black;
+
+body {
+  background-color: #274257;
+}
+
+#content {
+  width: $width-content;
+  background-color: #8F6048;
+  text-align: center;
+  margin : $center-box;
+  padding: 10px;
+  @include border-bottom-radius($radius);
+  @include box-shadow($shadow);
+}
+
+header {
+  @include border-top-radius($radius);
+  width: $width-content;
+  background-color: #644436;
+  color: #DFC184;
+  margin: $center-box;
+  margin-top: 60px;
+  padding: 10px;
+  @include box-shadow($shadow);
+}
+
+header h2 {
+  margin: 0px;
+  text-shadow: 2px 2px 2px black;
+}
+
+footer {
+  color: #7EB5D6;
+  text-align: center;
+  padding-top: 25px;
+}

@@ -11,6 +11,10 @@ javascripts:
     - public/javascripts/libraries/underscore.js
     - public/javascripts/libraries/backbone.js
     - public/javascripts/application.js
+    - public/javascripts/dispatcher.js
+    - public/javascripts/loadVideos.js
+    - public/javascripts/videos.js
+    - public/javascripts/player.js
     - public/javascripts/templates/**/*.jst
 
 stylesheets:

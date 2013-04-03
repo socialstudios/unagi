@@ -13,6 +13,9 @@ var Videos = (function() {
   }
 
   function setVideos(data) {
+    if (!data || !(data instanceof Array) || data.length == 0) {
+      console.log('no videos');
+    }
     videos = data;
   }
 
