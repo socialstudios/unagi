@@ -1,16 +1,17 @@
 package_assets: on
 package_path: assets-compiled
-compress_assets: true
+compress_assets: on
 javascript_compressor: closure
 gzip_assets: true
 
 javascripts:
   application:
-    - public/javascripts/libraries/**/*.js
+    - public/javascripts/libraries/zepto.min.js
+    - public/javascripts/libraries/underscore.js
+    - public/javascripts/libraries/backbone.js
     - public/javascripts/application.js
     - public/javascripts/templates/**/*.jst
 
 stylesheets:
   application:
-    - app/stylesheets/application.scss
     - public/stylesheets/**/*.css
