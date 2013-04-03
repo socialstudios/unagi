@@ -3,13 +3,17 @@ Unagi::App.controllers :show do
     haml 'show/index'.to_sym, :layout => 'layouts/show'
   end
 
-  get ':id', :provides => [:html] do
-    "Hello #{params[:id]}"
+  get ':id.json', :provides => [:json] do
+    show = Show.find_by(id: params[:id])
+    show['lineup'] = JSON.parse(show.data)
+    show.data = nil
+    show.to_json
   end
 
-  get ':id.json', :provides => [:json] do
-    {show_id: params[:id]}.to_json
+  get ':id', :provides => [:html] do
+    "Hello #{Show.find_by(id: params[:id]).to_json}"
   end
+
 
   # get :sample, :map => '/sample/url', :provides => [:any, :js] do
   #   case content_type
