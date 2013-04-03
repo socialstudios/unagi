@@ -1,0 +1,18 @@
+!!! 5
+%html
+  %head
+    %title= "Social Studios tv"
+    =include_stylesheets :application
+  %body
+    %header
+      %h2= "Hello there"
+
+    %section
+      %article
+        %p
+          =yield
+
+      %footer
+        %p
+          Copyright 2013 Social Studios
+    =include_javascripts :application

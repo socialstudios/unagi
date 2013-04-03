@@ -12,4 +12,5 @@ javascripts:
 
 stylesheets:
   application:
+    - app/stylesheets/application.scss
     - public/stylesheets/**/*.css

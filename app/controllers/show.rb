@@ -1,6 +1,6 @@
 Unagi::App.controllers :show do
   get :index do
-    haml 'show/index'.to_sym
+    haml 'show/index'.to_sym, :layout => 'layouts/show'
   end
 
   get ':id', :provides => [:html] do
