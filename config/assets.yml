@@ -7,7 +7,7 @@ gzip_assets: true
 javascripts:
   application:
     - public/javascripts/libraries/jquery-1.9.1.js
-    - public/javascripts/libraries/bootstrap.js
+    # - public/javascripts/libraries/bootstrap.js
     - public/javascripts/libraries/underscore.js
     - public/javascripts/libraries/backbone.js
     - public/javascripts/application.js
