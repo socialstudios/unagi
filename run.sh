@@ -1,1 +1,1 @@
-foreman start
+bundle exec padrino start

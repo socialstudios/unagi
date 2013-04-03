@@ -1,21 +1,15 @@
-# Connection.new takes host, port
-
-host = 'localhost'
-port = 27017
-
 database_name = case Padrino.env
   when :development then 'unagi_development'
   when :production  then 'unagi_production'
   when :test        then 'unagi_test'
 end
 
-# Use MONGO_URI if it's set as an environmental variable
-Mongoid::Config.sessions =
-  if ENV['MONGO_URI']
-    {default: {uri: ENV['MONGO_URI'] }}
-  else
-    {default: {hosts: ["#{host}:#{port}"], database: database_name}}
-  end
+# Use MONGOLAB_URI if it's set as an environmental variable
+Mongoid::Config.sessions = case Padrino.env
+  when :development then {default: {hosts: ["localhost:27017"], database: database_name}}
+  when :production  then {default: {uri: ENV['MONGOLAB_URI'] }}
+  when :test        then {default: {hosts: ["localhost:27017"], database: database_name}}
+end
 
 # If you want to use a YML file for config, use this instead:
 #
@@ -27,7 +21,7 @@ Mongoid::Config.sessions =
 #       default:
 #         database: unagi_development
 #         hosts:
-#           - localhost:27017 
+#           - localhost:27017
 #   production:
 #     sessions:
 #       default:
