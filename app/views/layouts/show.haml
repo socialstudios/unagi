@@ -3,14 +3,12 @@
   %head
     %title= "Social Studios tv"
     =include_stylesheets :application, :media => 'all'
-  %body
+  %body.bp
     %header
       %h2= "Hello there"
 
-    %section
-      %article
-        %p
-          =yield
+    %section#content
+      =yield
 
       %footer
         %p
