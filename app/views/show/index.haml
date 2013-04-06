@@ -1,1 +1,5 @@
-%div#player
+%ul
+  - Show.each do |show|
+    %li
+      %a{:href => show.id}= show.title
+

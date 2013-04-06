@@ -6,7 +6,7 @@
   %body
     .container-fluid
       %header
-        %h2= "Unagi"
+        %h2= @title
 
       %section#content
         =yield
@@ -16,4 +16,5 @@
           .container
             %p
               Copyright 2013 Social Studios
+
     =include_javascripts :application
