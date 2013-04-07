@@ -1,5 +1,5 @@
-%ul
+%ul#shows-menu
   - Show.each do |show|
     %li
-      %a{:href => show.id}= show.title
+      %a{:href => show.id, :class => 'btn item-width'}= show.title
 

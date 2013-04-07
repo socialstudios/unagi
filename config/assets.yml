@@ -6,8 +6,10 @@ gzip_assets: true
 
 javascripts:
   application:
-    - public/javascripts/libraries/jquery-1.9.1.js
     # - public/javascripts/libraries/bootstrap.js
+    # - public/javascripts/templates/**/*.jst
+    - public/javascripts/application.js
+  show:
     - public/javascripts/libraries/underscore.js
     - public/javascripts/libraries/backbone.js
     - public/javascripts/application.js
@@ -15,7 +17,11 @@ javascripts:
     - public/javascripts/loadVideos.js
     - public/javascripts/videos.js
     - public/javascripts/player.js
-    - public/javascripts/templates/**/*.jst
+  create:
+    - public/javascripts/libraries/parsley.js
+  jquery:
+    - public/javascripts/libraries/jquery-1.9.1.js
+
 
 stylesheets:
   application:

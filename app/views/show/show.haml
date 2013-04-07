@@ -1,3 +1,17 @@
+#fb-root
+
+:javascript
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=154085741294652";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
 %div#player
+<div class="fb-comments" data-href="http://example.com" data-width="470" data-num-posts="10"></div>
 %script
   var showId = '#{@show_id}';
+
+=include_javascripts :jquery
+=include_javascripts :show
