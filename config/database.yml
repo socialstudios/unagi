@@ -4,13 +4,6 @@ development:
       database: unagi_development
       hosts:
         - localhost:27017
-production:
-  sessions:
-    default:
-      uri: <%= ENV['MONGOLAB_URI'] %>
-      options:
-        skip_version_check: true
-        safe: true
 test:
   sessions:
     default:
