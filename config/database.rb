@@ -1,6 +1,6 @@
 database_name = case Padrino.env
   when :development then 'unagi_development'
-  # when :production  then 'unagi_production'
+  # for :production  the database name is part of MONGOLAB_URI
   when :test        then 'unagi_test'
 end
 
@@ -10,5 +10,3 @@ Mongoid::Config.sessions = case Padrino.env
   when :production  then {default: {uri: ENV['MONGOLAB_URI'] }}
   when :test        then {default: {hosts: ["localhost:27017"], database: database_name}}
 end
-
-# Mongoid.load!(File.join(Padrino.root, 'config', 'database.yml'), Padrino.env)
