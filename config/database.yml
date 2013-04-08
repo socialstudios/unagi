@@ -7,9 +7,10 @@ development:
 production:
   sessions:
     default:
-      database: unagi_production
-      hosts:
-        - <%= ENV['MONGOLAB_URI'] %>
+      uri: <%= ENV['MONGOLAB_URI'] %>
+      options:
+        skip_version_check: true
+        safe: true
 test:
   sessions:
     default:
