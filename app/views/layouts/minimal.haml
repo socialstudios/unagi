@@ -1,0 +1,13 @@
+!!! 5
+%html{lang: 'en'}
+  %head
+    %title Social Studios TV
+    =include_stylesheets :application, :media => 'all'
+  %body
+    %section#minimal-section
+      %h1#create-heading
+        SocialStudios TV
+      %hr
+      =yield
+
+    =include_javascripts :application

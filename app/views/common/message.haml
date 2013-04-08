@@ -1,0 +1,8 @@
+%div{:class => 'alert unagi-message ' + @type}
+  %strong
+    = @first
+  = @message
+  %br
+  %br
+  %a{:href => @return_url, :class => 'btn'}
+    = @button_caption
