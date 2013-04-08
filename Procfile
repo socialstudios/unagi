@@ -1,1 +1,1 @@
-web: bundle exec padrino start -p $PORT -h 0.0.0.0 -e production
+web: bundle exec padrino start -p $PORT -h 0.0.0.0 -e $RACK_ENV
