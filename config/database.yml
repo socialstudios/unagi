@@ -9,7 +9,7 @@ production:
     default:
       database: unagi_production
       hosts:
-        - localhost:27017
+        - <%= ENV['MONGOLAB_URI'] %>
 test:
   sessions:
     default:
