@@ -1,65 +1,54 @@
-!!! 5
-%html{lang: 'en'}
-  %head
-    %title Social Studios TV
-    =include_stylesheets :application, :media => 'all'
-  %body
+%section#main-form
+  %form{:method => 'post', :action => '/show/create', 'data-validate' => "parsley", :id => 'create-form'}
+    %legend
+      Create an item
+    %label
+      Enter your name
+    %input{:id => 'name', :name => 'show[name]', :type => 'text', :placeholder => 'Your name', 'data-required' => 'true'}
+    %label
+      Enter your email
+    %input{:id => 'email', :name => 'show[email]', :type => 'text', :placeholder => 'Your email', 'data-required' => 'true', 'data-type' => "email"}
+    %label
+      Write item topic
+    %input{:type => 'text', :placeholder => 'Music, Technology...', :id => 'topic', :name => 'show[topic]', 'data-required' => 'true'}
+    %h3
+      Your #1 video capture
+    %ul
+      %li
+        Intreduce yourself.
+      %li
+        Tell the viewers about the youtube video their about to watch.
+      %li
+        Express your own feeling or opinion on the youtube video.
+    %input{:type => 'text', :placeholder => 'Upload your video capture to youtube and paste the url here...', :id => 'opening', :name => 'show[opening]', 'data-required' => 'true', 'data-type' => "url", :class => 'url-field-width'}
 
-    %section#create-section
-      %section#main-form
-        %h1#create-heading
-          SocialStudios TV
-        %hr
-        %form{:method => 'post', :action => '/show/create', 'data-validate' => "parsley", :id => 'create-form'}
-          %legend
-            Create an item
-          %label
-            Enter your name
-          %input{:id => 'name', :name => 'show[name]', :type => 'text', :placeholder => 'Your name', 'data-required' => 'true'}
-          %label
-            Enter your email
-          %input{:id => 'email', :name => 'show[email]', :type => 'text', :placeholder => 'Your email', 'data-required' => 'true', 'data-type' => "email"}
-          %label
-            Write item topic
-          %input{:type => 'text', :placeholder => 'Music, Technology...', :id => 'topic', :name => 'show[topic]', 'data-required' => 'true'}
-          %h3
-            Your #1 video capture
-          %ul
-            %li
-              Intreduce yourself.
-            %li
-              Tell the viewers about the youtube video their about to watch.
-            %li
-              Express your own feeling or opinion on the youtube video.
-          %input{:type => 'text', :placeholder => 'Upload your video capture to youtube and paste the url here...', :id => 'opening', :name => 'show[opening]', 'data-required' => 'true', 'data-type' => "url", :class => 'url-field-width'}
+    %h3
+      The talked about youtube video
+    %input{:id => 'thevideo', :type => 'text', :placeholder => 'paste the link to the youtube video', :name => 'show[thevideo]', 'data-required' => 'true', 'data-type' => "url", :class => 'url-field-width'}
 
-          %h3
-            The talked about youtube video
-          %input{:id => 'thevideo', :type => 'text', :placeholder => 'paste the link to the youtube video', :name => 'show[thevideo]', 'data-required' => 'true', 'data-type' => "url", :class => 'url-field-width'}
+    %h3
+      Your #2 video capture
+    %ul
+      %li
+        Leave the viewers with something to think about.
+      %li
+        Intrest the viewers with your next video.
+      %li
+        Say goodbye.
+    %input{:type => 'text', :placeholder => 'Upload your video capture to youtube and paste the url here...', :id => 'closing', :name => 'show[closing]', 'data-required' => 'true', 'data-type' => "url", :class => 'url-field-width'}
+    %hr
+    %input{:type => 'submit'}
 
-          %h3
-            Your #2 video capture
-          %ul
-            %li
-              Leave the viewers with something to think about.
-            %li
-              Intrest the viewers with your next video.
-            %li
-              Say goodbye.
-          %input{:type => 'text', :placeholder => 'Upload your video capture to youtube and paste the url here...', :id => 'closing', :name => 'show[closing]', 'data-required' => 'true', 'data-type' => "url", :class => 'url-field-width'}
-          %hr
-          %input{:type => 'submit'}
+  %div#need-help
+    %h3
+      Need help?
+    %p
+      For any type of questions you may have please contact us:
+    %a{:href => 'mailto:info@socialstudios.tv'}
+      info@socialstudios.tv
 
-        %div#need-help
-          %h3
-            Need help?
-          %p
-            For any type of questions you may have please contact us:
-          %a{:href => 'mailto:info@socialstudios.tv'}
-            info@socialstudios.tv
+  %section#overview
+    %img{:src => '/images/template.png'}
 
-      %section#overview
-        %img{:src => '/images/template.png'}
-
-    =include_javascripts :jquery
-    =include_javascripts :create
+=include_javascripts :jquery
+=include_javascripts :create

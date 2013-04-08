@@ -1,6 +1,6 @@
 Unagi::App.controllers :show do
   get '/create' do
-    haml 'show/create'.to_sym
+    haml 'show/create'.to_sym, :layout => 'layouts/minimal'
   end
 
   post '/create' do
@@ -24,9 +24,19 @@ Unagi::App.controllers :show do
     # save to db
     @show = Show.new(prepared_data)
     if @show.save then
-      "Thanks, your data has been saved."
+      @first = 'Thanks,'
+      @message = 'your data has been saved.'
+      @type = 'alert-success'
+      @return_url = '/show'
+      @button_caption = 'Continue'
+      haml 'common/message'.to_sym, :layout => 'layouts/minimal'
     else
-      "Something went wrong, click back and try again."
+      @first = 'Error,'
+      @message = 'Something went wrong, click back and try again.'
+      @type = 'alert-error'
+      @return_url = '/show/create'
+      @button_caption = 'Try again'
+      haml 'common/message'.to_sym, :layout => 'layouts/minimal'
     end
   end
 

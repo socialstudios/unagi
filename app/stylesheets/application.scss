@@ -66,11 +66,13 @@ footer {
 
 #create-heading {
   text-shadow: 2px 2px 2px gray;
+  padding: $form-padding 0px 0px $form-padding;
+  margin: 0px;
 }
 
 #overview {
   margin: $center-box;
-  width: $page-width + $form-padding * 2;
+  width: $page-width;
   text-align: center;
   background-color: white;
 }
@@ -83,10 +85,12 @@ input[type=submit] {
   float: right;
 }
 
-#create-section {
+#minimal-section {
   width: $page-width + $form-padding * 2;
   @include box-shadow($shadow);
   margin: $center-box;
+  background-color: white;
+  padding-bottom: 25px;
 }
 
 .item-width {
@@ -95,4 +99,9 @@ input[type=submit] {
 
 #shows-menu {
   list-style-type: none;
+}
+
+.unagi-message {
+  width: 400px;
+  margin: $center-box;
 }
