@@ -1,1 +1,1 @@
-bundle exec padrino start
+RACK_ENV=development foreman start
